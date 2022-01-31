@@ -6,6 +6,8 @@ import menu from '../../public/menu.png'
 import styles from '../../styles/Navbar.module.scss'
 import styles2 from '../../styles/Home.module.scss'
 
+// FIX: Image Overlay on Navbar & Change Icon
+
 function Layout ({ children }) {
   const [isOpen, setIsOpen] = useState(false)
   const openMenu = () => setIsOpen(!isOpen)
