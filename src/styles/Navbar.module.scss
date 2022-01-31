@@ -1,0 +1,135 @@
+
+
+$rosewater:   #F5E0DC;
+$flamingo:    #F2CDCD;
+$mauve:       #DDB6F2;
+$pink:        #F5C2E7;
+$maroon:      #E8A2AF;
+$red:         #F28FAD;
+$peach:       #F8BD96;
+$yellow:      #FAE3B0;
+$green:       #ABE9B3;
+$teal:        #B5E8E0;
+$blue:        #96CDFB;
+$sky:         #89DCEB;
+$lavender:    #C9CBFF;
+
+$black0:      #161320;
+$black1:      #1A1826;
+$black2:      #1E1E2E;
+$black3:      #302D41;
+$black4:      #575268;
+$gray0:       #6E6C7E;
+$gray1:       #988BA2;
+$gray2:       #C3BAC6;
+$white:       #D9E0EE;
+
+.menu_btn {
+    width: 10%;
+}
+
+.header{
+    border-bottom: 1px solid $white;
+    background-color: $black4;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.catppuccin {
+    display: none;
+    
+}
+
+.bar {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: $black4;
+}
+
+.navmenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.navitem {
+    margin-left: 5rem;
+}
+
+.navlink{
+    font-size: 1rem;
+    font-weight: 400;
+    color: $lavender;
+    text-transform: uppercase;
+    list-style: none;
+}
+
+.navlink:hover{
+    color: $mauve;
+}
+
+.navlogo {
+    font-size: 2.1rem;
+    font-weight: 500;
+    
+}
+
+@media only screen and (max-width: 768px) {
+    .navmenu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: $black3;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 10px $black4;
+    }
+
+    .navmenu.active {
+        left: 0;
+    }
+
+    .navitem {
+        margin: 2.5rem 0;
+    }
+
+    .catppuccin {
+        display: block;
+        cursor: pointer;
+        background-color: $mauve;
+        border-radius: 10px;
+       width: 10%; 
+    }
+
+    .catppuccin.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .catppuccin.active .bar:nth-child(1) {
+        -webkit-transform: translateY(8px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .catppuccin.active .bar:nth-child(3) {
+        -webkit-transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+.footer {
+    font-size: 1.5rem;
+}
